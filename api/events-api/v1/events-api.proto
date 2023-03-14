@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option go_package = "github.com/Vovchikus/events-api/pkg/events-api;events_api_v1";
+
+package events.api.v1;
+
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+service HealthService {
+  rpc CheckHealth (google.protobuf.Empty) returns (Health) {
+    option (google.api.http) = {
+      get: "/health"
+    };
+  };
+}
+
+service EventService {
+  rpc PostCreateEvent (CreateEventRequest) returns (CreateEventResponse) {
+    option (google.api.http) = {
+      post: "/v1/events"
+      body: "*"
+    };
+  }
+}
+
+message CreateEventRequest {
+  repeated string events = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['events']}];
+}
+
+message CreateEventResponse {
+  string result = 1;
+}
+
+message Health {
+  int64 Uptime = 1;
+  float AllocatedMemory = 2;
+  float TotalAllocatedMemory = 3;
+  int32 Goroutines = 4;
+  uint32 GCCycles = 5;
+  int32 NumberOfCPUs = 6;
+  float HeapSys = 7;
+  float HeapAllocated = 8;
+  uint64 ObjectsInUse = 9;
+  float OSMemoryObtained = 10;
+}

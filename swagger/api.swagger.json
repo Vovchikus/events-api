@@ -1,0 +1,171 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "api/events-api/v1/events-api.proto",
+    "version": "version not set"
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "HealthService_CheckHealth",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1Health"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/runtimeError"
+            }
+          }
+        },
+        "tags": [
+          "HealthService"
+        ]
+      }
+    },
+    "/v1/events": {
+      "post": {
+        "operationId": "EventService_PostCreateEvent",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CreateEventResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/runtimeError"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CreateEventRequest"
+            }
+          }
+        ],
+        "tags": [
+          "EventService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "type_url": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "runtimeError": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1CreateEventRequest": {
+      "type": "object",
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "required": [
+            "events"
+          ]
+        }
+      }
+    },
+    "v1CreateEventResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "v1Health": {
+      "type": "object",
+      "properties": {
+        "Uptime": {
+          "type": "string",
+          "format": "int64"
+        },
+        "AllocatedMemory": {
+          "type": "number",
+          "format": "float"
+        },
+        "TotalAllocatedMemory": {
+          "type": "number",
+          "format": "float"
+        },
+        "Goroutines": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "GCCycles": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "NumberOfCPUs": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "HeapSys": {
+          "type": "number",
+          "format": "float"
+        },
+        "HeapAllocated": {
+          "type": "number",
+          "format": "float"
+        },
+        "ObjectsInUse": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "OSMemoryObtained": {
+          "type": "number",
+          "format": "float"
+        }
+      }
+    }
+  }
+}
