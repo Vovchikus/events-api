@@ -39,7 +39,7 @@ deps:
 		go install github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 		go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
 		go install github.com/envoyproxy/protoc-gen-validate
-		go mod tidy -go=1.18
+		go mod tidy -go=1.20
 		#go mod tidy -go=1.16 && go mod tidy -go=1.17
 		#go mod tidy -compat=1.17
 

@@ -26,7 +26,7 @@ service EventService {
 }
 
 message CreateEventRequest {
-  repeated string events = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['events']}];
+  repeated string events = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['event']}];
 }
 
 message CreateEventResponse {
