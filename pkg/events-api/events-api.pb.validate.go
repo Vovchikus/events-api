@@ -59,7 +59,11 @@ func (m *CreateEventRequest) validate(all bool) error {
 
 	// no validation rules for Id
 
+	// no validation rules for EventType
+
 	// no validation rules for Content
+
+	// no validation rules for CreatedAt
 
 	if len(errors) > 0 {
 		return CreateEventRequestMultiError(errors)
@@ -165,7 +169,11 @@ func (m *CreateEventResponse) validate(all bool) error {
 
 	// no validation rules for Id
 
+	// no validation rules for EventType
+
 	// no validation rules for Content
+
+	// no validation rules for CreatedAt
 
 	if len(errors) > 0 {
 		return CreateEventResponseMultiError(errors)

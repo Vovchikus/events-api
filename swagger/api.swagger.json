@@ -109,10 +109,22 @@
             "id"
           ]
         },
+        "eventType": {
+          "type": "string",
+          "required": [
+            "type"
+          ]
+        },
         "content": {
           "type": "string",
           "required": [
             "content"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "required": [
+            "createdAt"
           ]
         }
       }
@@ -123,7 +135,13 @@
         "id": {
           "type": "string"
         },
+        "eventType": {
+          "type": "string"
+        },
         "content": {
+          "type": "string"
+        },
+        "createdAt": {
           "type": "string"
         }
       }

@@ -1,21 +1,17 @@
 package model
 
 type Event struct {
-	ID      string `json:"id"`
-	Content string `json:"content"`
+	ID        string `json:"id"`
+	EventType string `json:"type"`
+	Content   string `json:"content"`
+	CreatedAt string `json:"createdAt"`
 }
 
-func NewEvent(id string, content string) *Event {
+func NewEvent(id string, content string, eventType string, createdAt string) *Event {
 	return &Event{
-		ID:      id,
-		Content: content,
+		ID:        id,
+		EventType: eventType,
+		Content:   content,
+		CreatedAt: createdAt,
 	}
-}
-
-func (e *Event) GetId() string {
-	return e.ID
-}
-
-func (e *Event) GetContent() string {
-	return e.Content
 }

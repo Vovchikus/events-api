@@ -41,8 +41,8 @@ github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym
 github.com/Shopify/sarama v1.38.1 h1:lqqPUPQZ7zPqYlWpTh+LQ9bhYNu2xJL6k1SJN4WVe2A=
 github.com/Shopify/sarama v1.38.1/go.mod h1:iwv9a67Ha8VNa+TifujYoWGxWnu2kNVAQdSdZ4X2o5g=
 github.com/Shopify/toxiproxy/v2 v2.5.0 h1:i4LPT+qrSlKNtQf5QliVjdP08GyAH8+BUIc9gT0eahc=
-github.com/Vovchikus/events-api/pkg/events-api v0.0.0-20230315133046-94a0550beec8 h1:0aHs9XzTIwLNerc+WlPs3vq7xMVYjiKXzCIijwQOoCQ=
-github.com/Vovchikus/events-api/pkg/events-api v0.0.0-20230315133046-94a0550beec8/go.mod h1:oimQxq6Mt/9rI7OMiw6FsDskK4cHwJypSlyhvrtWbDM=
+github.com/Vovchikus/events-api/pkg/events-api v0.0.0-20230315152024-a93dc95caeab h1:lNWeTSUzLNg+MoRwUzbK0lJRYyPmxSL2FzrIAJKNXOc=
+github.com/Vovchikus/events-api/pkg/events-api v0.0.0-20230315152024-a93dc95caeab/go.mod h1:xkCasIxDjGBMBMnb7C37Dc1LwRsSAZH0T9mnQBlm1/Q=
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=

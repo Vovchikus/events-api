@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/Shopify/sarama v1.38.1
-	github.com/Vovchikus/events-api/pkg/events-api v0.0.0-20230315133046-94a0550beec8
+	github.com/Vovchikus/events-api/pkg/events-api v0.0.0-20230315152024-a93dc95caeab
 	github.com/gojuno/minimock/v3 v3.1.1
 	github.com/golang/glog v1.1.0
 	github.com/golang/protobuf v1.5.3
