@@ -26,11 +26,13 @@ service EventService {
 }
 
 message CreateEventRequest {
-  repeated string events = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['event']}];
+  string id = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['id']}];;
+  string content = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['content']}];;
 }
 
 message CreateEventResponse {
-  string result = 1;
+  string id = 1;
+  string content = 2;
 }
 
 message Health {

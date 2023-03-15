@@ -103,13 +103,16 @@
     "v1CreateEventRequest": {
       "type": "object",
       "properties": {
-        "events": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
+        "id": {
+          "type": "string",
           "required": [
-            "event"
+            "id"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "required": [
+            "content"
           ]
         }
       }
@@ -117,7 +120,10 @@
     "v1CreateEventResponse": {
       "type": "object",
       "properties": {
-        "result": {
+        "id": {
+          "type": "string"
+        },
+        "content": {
           "type": "string"
         }
       }

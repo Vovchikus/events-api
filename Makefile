@@ -13,13 +13,14 @@ test:
 deps:
 		ls go.mod || go mod init github.com/Vovchikus/events-api
 		go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
-		go get -u github.com/golang/protobuf/proto
+		go get -u google.golang.org/protobuf
 		go get -u github.com/golang/protobuf/protoc-gen-go
 		go get google.golang.org/grpc
 		go get -u google.golang.org/grpc/cmd/protoc-gen-go-grpc
 		go get -u github.com/envoyproxy/protoc-gen-validate
 		go get -u gopkg.in/yaml.v3
 		go get -u go.uber.org/zap
+		go get -u github.com/Shopify/sarama
 		go get github.com/rs/zerolog/log
 		go get golang.org/x/sync
 		go get github.com/sarulabs/di

@@ -7,7 +7,6 @@ import (
 	"net"
 	"net/http"
 	"os"
-	"os/signal"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -34,7 +33,6 @@ func (a *App) grpcService(wg *sync.WaitGroup) {
 	defer wg.Done()
 
 	c := make(chan os.Signal, 1)
-	signal.Notify(c, os.Interrupt)
 
 	go func() {
 		oscall := <-c

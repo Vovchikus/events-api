@@ -7,7 +7,7 @@ import (
 	desc "github.com/Vovchikus/events-api/pkg/events-api"
 )
 
-func (i *Implementation) GetEvents(ctx context.Context, request *desc.CreateEventRequest) (desc.CreateEventResponse, error) {
+func (i *Implementation) PostCreateEvent(ctx context.Context, request *desc.CreateEventRequest) (r *desc.CreateEventResponse, e error) {
 
 	fmt.Println(request)
 
@@ -15,5 +15,5 @@ func (i *Implementation) GetEvents(ctx context.Context, request *desc.CreateEven
 
 	i.eventService.CreateEvent(event)
 
-	return desc.CreateEventResponse{}, nil
+	return &desc.CreateEventResponse{}, nil
 }

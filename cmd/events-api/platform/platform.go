@@ -61,13 +61,11 @@ func New() *App {
 	if err != nil {
 		fmt.Println("Ошибка при создании клиента:", err.Error())
 	}
-	defer kafkaClient.Close()
 
 	producer, err := sarama.NewSyncProducerFromClient(kafkaClient)
 	if err != nil {
 		fmt.Println("Ошибка при создании производителя:", err.Error())
 	}
-	defer producer.Close()
 
 	s := grpc.NewServer()
 	eventsApi.RegisterEventServiceServer(
