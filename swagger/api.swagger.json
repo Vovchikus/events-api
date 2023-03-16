@@ -109,7 +109,7 @@
             "id"
           ]
         },
-        "eventType": {
+        "type": {
           "type": "string",
           "required": [
             "type"
@@ -135,7 +135,7 @@
         "id": {
           "type": "string"
         },
-        "eventType": {
+        "type": {
           "type": "string"
         },
         "content": {

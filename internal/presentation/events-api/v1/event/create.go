@@ -8,7 +8,7 @@ import (
 
 func (i *Implementation) PostCreateEvent(ctx context.Context, request *desc.CreateEventRequest) (r *desc.CreateEventResponse, e error) {
 
-	event := model.NewEvent(request.Id, request.Content, request.EventType, request.CreatedAt)
+	event := model.NewEvent(request.Id, request.Content, request.Type, request.CreatedAt)
 
 	i.eventService.CreateEvent(event)
 
@@ -16,7 +16,7 @@ func (i *Implementation) PostCreateEvent(ctx context.Context, request *desc.Crea
 	response.Content = event.Content
 	response.Id = event.ID
 	response.CreatedAt = event.CreatedAt
-	response.EventType = event.EventType
+	response.Type = event.EventType
 
 	return &response, nil
 }

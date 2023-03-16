@@ -59,7 +59,7 @@ func (m *CreateEventRequest) validate(all bool) error {
 
 	// no validation rules for Id
 
-	// no validation rules for EventType
+	// no validation rules for Type
 
 	// no validation rules for Content
 
@@ -169,7 +169,7 @@ func (m *CreateEventResponse) validate(all bool) error {
 
 	// no validation rules for Id
 
-	// no validation rules for EventType
+	// no validation rules for Type
 
 	// no validation rules for Content
 
