@@ -40,8 +40,6 @@ func (r *kafkaEventRepository) CreateEvent(event *model.Event) error {
 		Value: sarama.ByteEncoder(messageBytes),
 	}
 
-	fmt.Println(message)
-
 	_, _, err = r.producer.SendMessage(message)
 	if err != nil {
 		return fmt.Errorf("error sending event message: %v", err)

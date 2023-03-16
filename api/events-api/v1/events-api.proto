@@ -27,14 +27,14 @@ service EventService {
 
 message CreateEventRequest {
   string id = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['id']}];;
-  string eventType = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['type']}];;
+  string type = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['type']}];;
   string content = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['content']}];;
   string createdAt = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {required: ['createdAt']}];;
 }
 
 message CreateEventResponse {
   string id = 1;
-  string eventType = 2;
+  string type = 2;
   string content = 3;
   string createdAt = 4;
 }
