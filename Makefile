@@ -36,7 +36,6 @@ deps:
 		go get github.com/spf13/viper
 		go get github.com/ProsviryakovVadim/bigcache-lib
 		go get github.com/gojuno/minimock/v3
-		go get github.com/night-codes/go-sypexgeo
 		go install github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 		go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
 		go install github.com/envoyproxy/protoc-gen-validate
